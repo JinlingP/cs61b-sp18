@@ -14,6 +14,22 @@ public class LeapYear {
         }
     }
 
+    /** Check the input year is a leap year or not.
+     *  @param  year to be analyzed
+     */
+    public static boolean isLeapYear(int year){
+        boolean leap = false;
+
+        //divisible by 400 or divisible by 4 and not by 100.
+        if(year%400 == 0){
+            leap = true;
+        }else if(year%4 == 0 && year%100 != 0){
+            leap = true;
+        }
+
+        return leap;
+    }
+
     /** Must be provided an integer as a command line argument ARGS. */
     public static void main(String[] args) {
         if (args.length < 1) {
